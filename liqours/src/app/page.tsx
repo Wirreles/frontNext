@@ -5,15 +5,12 @@ import BannerProductsGin from "@/components/bannerProductHome/bannerGin";
 import Carousel from "@/components/carousel/Carousel";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import SuscribeCards from "@/components/suscribeCards/SuscribeCards";
-import { Reviews } from "@/components/reviews";
-import { Products } from "@/components/products";
 
 export default function Landing() {
   return (
     <div>
       <Carousel></Carousel>
-      <Reviews></Reviews>
-      <Products></Products>
+
       <div className="flex flex-col bg-greyMLfilter scroll-smooth overflow-auto pt-10 items-center">
         {/*SECCION UNO DE TARJETAS (todas las categorias) */}
         <h1 className="text-center text-2xl text-black font-plus-jakarta-sans font-normal mb-4">
@@ -34,8 +31,8 @@ export default function Landing() {
         <ExpandMoreIcon className="flex items-center mt-6" />
         {/*FILTRA DESDE EL BACK SOLO GIN */}
         <div className="flex space-x-4">
-        <BannerProductsGin />
-          </div>
+          <BannerProductsGin />
+        </div>
 
         {/*SECCION TRES DE TARJETAS (aqui podria ir otra a eleccion*/}
         <div className="w-full bg-grey4">

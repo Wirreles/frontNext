@@ -70,7 +70,6 @@ export const Products = () => {
 
   return (
     <div>
-      <h2>All Products</h2>
       {data?.map((product) => (
         <p key={product.id}>{product.name}</p>
       ))}
