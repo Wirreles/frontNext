@@ -2,7 +2,6 @@ import { ITeamMember } from "@/interfaces/interfaz";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Link from "next/link";
-import Image from "next/image";
 
 export const CardTeam: React.FC<ITeamMember> = ({
   id,
@@ -14,7 +13,7 @@ export const CardTeam: React.FC<ITeamMember> = ({
 }) => {
   return (
     <div className="flex flex-col bg-white border-t-8 border-2 rounded-t-xl rounded-lg border-solid border-wine gap-2 items-center justify-center p-4 w-48 h-64 transform transition-transform duration-300 hover:translate-y-[-0.5rem] shadow-md hover:shadow-lg">
-      <Image
+      <img
         src={img}
         alt={name}
         className="cardTeamImg w-24 h-24 object-cover rounded-full"
