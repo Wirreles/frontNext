@@ -1,6 +1,5 @@
 import { INews } from "@/interfaces/interfaz";
 import React from "react";
-import Image from "next/image"; // Importa el componente Image de next/image
 
 const NewsItem = ({ newItem }: { newItem: INews }) => {
   const isImageRight = newItem.direction === "right";
@@ -12,20 +11,13 @@ const NewsItem = ({ newItem }: { newItem: INews }) => {
       }`}
     >
       <div className="relative z-20 w-auto h-1/2 flex-shrink-0">
-        <Image
-          src={newItem.imageB}
-          alt={newItem.title}
-          layout="fill"
-          objectFit="contain"
-          className="absolute"
-        />
+        <img src={newItem.imageB} alt={newItem.title} className="absolute" />
       </div>
       <div className="relative z-30 w-1/4 h-1/5 flex-shrink-0 opacity-85">
-        <Image
+        <img
           src={newItem.imageF}
           alt={newItem.title}
-          layout="fill"
-          objectFit="contain"
+          className="relative object-contain"
         />
       </div>
       <div
