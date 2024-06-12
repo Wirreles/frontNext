@@ -10,16 +10,16 @@ const NewsItem = ({ newItem }: { newItem: INews }) => {
         isImageRight ? "flex-row-reverse" : "flex-row"
       }`}
     >
-      <div className="relative z-20 w-auto h-1/2 flex-shrink-0">
-        <img src={newItem.imageB} alt={newItem.title} className="absolute" />
-      </div>
-      <div className="relative z-30 w-1/4 h-1/5 flex-shrink-0 opacity-85">
-        <img
-          src={newItem.imageF}
-          alt={newItem.title}
-          className="relative object-contain"
-        />
-      </div>
+      <img
+        src={newItem.imageB}
+        alt={newItem.title}
+        className="z-20 absolute  w-auto h-1/2 object-contain flex-shrink-0"
+      />
+      <img
+        src={newItem.imageF}
+        alt={newItem.title}
+        className="z-30  w-1/4 h-1/5 object-contain flex-shrink-0 opacity-85"
+      ></img>
       <div
         className={`flex flex-col justify-center ${
           isImageRight ? "text-right mr-4" : "text-left ml-4"
@@ -33,7 +33,7 @@ const NewsItem = ({ newItem }: { newItem: INews }) => {
           </b>
         </div>
         <div className="z-50">
-          <p className="text-gray-700 text-base font-plus-jakarta-sans">
+          <p className="  text-gray-700 text-base font-plus-jakarta-sans">
             {newItem.text}
           </p>
         </div>
